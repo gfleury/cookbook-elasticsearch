@@ -9,7 +9,6 @@ conf_path = "/usr/local/etc/elasticsearch/elasticsearch.yml"
 
 script 'inject_conf' do
   interpreter "bash"
-  cwd ::File.dirname(src_filepath)
   code <<-EOH
     echo "plugin.mandatory: cloud-aws" >> #{conf_path}
     echo "discovery.type: ec2" >> #{conf_path}
