@@ -20,8 +20,6 @@ script 'inject_conf' do
     echo "discovery.ec2.groups: #{node[:awsc][:aws_sg]}" >> #{conf_path}
     echo "discovery.ec2.any_group: false" >> #{conf_path}
     echo "script.groovy.sandbox.enabled: true" >> #{conf_path}
-    sed -i '/discovery.zen.ping.multicast.enabled: true/d' #{conf_path}
-    sed -i '/discovery.zen.minimum_master_nodes: 1/d' #{conf_path}
     EOH
 end
 
