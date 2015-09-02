@@ -24,5 +24,5 @@ script 'inject_conf' do
 end
 
 install_plugin "elasticsearch/elasticsearch-cloud-aws/#{node.elasticsearch['plugins']['elasticsearch/elasticsearch-cloud-aws']['version']}"
-
+install_plugin "lmenezes/elasticsearch-kopf/1.4.7"
 
